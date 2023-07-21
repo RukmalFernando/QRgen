@@ -3,17 +3,80 @@ import "./styles.css";
 import QRCodeStyling from "qr-code-styling";
 
 const qrCode = new QRCodeStyling({
-  width: 300,
-  height: 300,
-  image:
-    "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
-  dotsOptions: {
-    color: "#4267b2",
-    type: "rounded"
+  width: 500,
+  height: 500,
+  margin: 30,
+  qrOptions: {
+    typeNumber: 4,
+    mode: "Byte",
+    errorCorrectionLevel: "H"
   },
-  imageOptions: {
-    crossOrigin: "anonymous",
-    margin: 20
+  imageOptions: { 
+    hideBackgroundDots: false, 
+    imageSize: 0, 
+    margin: 0 },
+  dotsOptions: { 
+    type: "dots", 
+    color: "#000000", 
+    gradient: null 
+  },
+  backgroundOptions: { color: "#ffffff" },
+  image: null,
+  dotsOptionsHelper: {
+    colorType: { 
+        single: true, 
+        gradient: false },
+    gradient: {
+      linear: true,
+      radial: false,
+      color1: "#6a1a4c",
+      color2: "#6a1a4c",
+      rotation: 0
+    }
+  },
+  cornersSquareOptions: {
+    type: "extra-rounded",
+    color: "#000000",
+    gradient: null
+  },
+  cornersSquareOptionsHelper: {
+    colorType: { 
+        single: true, 
+        gradient: false },
+    gradient: {
+      linear: true,
+      radial: false,
+      color1: "#000000",
+      color2: "#000000",
+      rotation: 0
+    }
+  },
+  cornersDotOptions: { 
+    type: "", 
+    color: "#000000" },
+  cornersDotOptionsHelper: {
+    colorType: { 
+        single: true, 
+        gradient: false },
+    gradient: {
+      linear: true,
+      radial: false,
+      color1: "#000000",
+      color2: "#000000",
+      rotation: 0
+    }
+  },
+  backgroundOptionsHelper: {
+    colorType: { 
+        single: true, 
+        gradient: false },
+    gradient: {
+      linear: true,
+      radial: false,
+      color1: "#ffffff",
+      color2: "#ffffff",
+      rotation: 0
+    }
   }
 });
 
@@ -72,6 +135,6 @@ const styles = {
   },
   inputBox: {
     flexGrow: 1,
-    marginRight: 20
+    marginRight: 50
   }
 };
