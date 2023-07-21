@@ -3,9 +3,9 @@ import "./styles.css";
 import QRCodeStyling from "qr-code-styling";
 
 const qrCode = new QRCodeStyling({
-  width: 500,
-  height: 500,
-  margin: 30,
+  width: 5000,
+  height: 5000,
+  margin: 300,
   qrOptions: {
     typeNumber: 4,
     mode: "Byte",
@@ -81,7 +81,7 @@ const qrCode = new QRCodeStyling({
 });
 
 export default function App() {
-  const [url, setUrl] = useState("https://qr-code-styling.com");
+  const [url, setUrl] = useState("Enter Your URL");
   const [fileExt, setFileExt] = useState("png");
   const ref = useRef(null);
 
@@ -121,7 +121,7 @@ export default function App() {
         </select>
         <button onClick={onDownloadClick}>Download</button>
       </div>
-      <div ref={ref} />
+        <div style={styles.outputQr} ref={ref} />
     </div>
   );
 }
@@ -135,6 +135,13 @@ const styles = {
   },
   inputBox: {
     flexGrow: 1,
-    marginRight: 50
+    marginRight: 20
+  },
+  outputQr: {
+    display: "flex",
+    width: "500px",
+    height: "500px",
+    marginLeft: "200px",
+    marginRight: "200px"
   }
 };
