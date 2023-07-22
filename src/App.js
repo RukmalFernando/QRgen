@@ -8,15 +8,15 @@ const qrCode = new QRCodeStyling({
   margin: 300,
   qrOptions: {
     typeNumber: 4,
-    mode: "Byte",
-    errorCorrectionLevel: "H"
+    mode: 'Byte',
+    errorCorrectionLevel: 'H'
   },
   imageOptions: { 
     hideBackgroundDots: false, 
     imageSize: 0, 
     margin: 0 },
   dotsOptions: { 
-    type: "dots", 
+    type: 'dots', 
     color: "#000000", 
     gradient: null 
   },
@@ -79,9 +79,9 @@ const qrCode = new QRCodeStyling({
     }
   }
 });
-
 export default function App() {
-  const [url, setUrl] = useState("Enter Your URL");
+
+  const [url, setUrl] = useState("https://rukmalfdo.me/");
   const [fileExt, setFileExt] = useState("png");
   const ref = useRef(null);
 
@@ -112,8 +112,9 @@ export default function App() {
 
   return (
     <div className="App">
+      <text className="mText"><p>Enter Your URL</p></text>
       <div style={styles.inputWrapper}>
-        <input value={url} onChange={onUrlChange} style={styles.inputBox} />
+        <input value={url} onChange={onUrlChange}  style={styles.inputBox}  placeholder="Enter Your URL" />
         <select onChange={onExtensionChange} value={fileExt}>
           <option value="png">PNG</option>
           <option value="jpeg">JPEG</option>
@@ -139,9 +140,12 @@ const styles = {
   },
   outputQr: {
     display: "flex",
-    width: "500px",
-    height: "500px",
-    marginLeft: "200px",
-    marginRight: "200px"
+    // width: "500px",
+    // height: "500px",
+    justifyContent: "center",
+    position: "absolute",
+    height:"100%", 
+    width:"100%",
+    // display: "table"
   }
 };
