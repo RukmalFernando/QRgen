@@ -7,7 +7,7 @@ const qrCode = new QRCodeStyling({
   height: 5000,
   margin: 300,
   qrOptions: {
-    typeNumber: 4,
+    typeNumber: 3,
     mode: 'Byte',
     errorCorrectionLevel: 'H'
   },
