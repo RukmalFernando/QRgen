@@ -5,15 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "author": "tharu",
   "license": "ISC",
   "dependencies": {
-    "@types/jest": "^29.5.3",
-    "@types/node": "^20.4.2",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "npm-check-updates": "^16.10.16",
     "qr-code-styling": "^1.6.0-rc.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -37,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.3"
   }
 }
